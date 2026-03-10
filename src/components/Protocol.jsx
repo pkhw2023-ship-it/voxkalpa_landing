@@ -82,7 +82,7 @@ export default function Protocol() {
             {cards.map((card, i) => (
                 <div key={card.id} className="protocol-card sticky top-0 h-screen w-full flex items-center justify-center p-4 sm:p-6 md:p-12 overflow-hidden mx-auto">
                     {/* Card Surface */}
-                    <div className="relative w-full max-w-[80rem] h-full max-h-[85vh] bg-graphite/80 backdrop-blur-3xl rounded-[3rem] border border-white/10 p-8 md:p-20 flex flex-col md:flex-row shadow-[0_30px_100px_rgba(0,0,0,0.8)] overflow-hidden">
+                    <div className="relative w-full max-w-[80rem] h-full max-h-[85vh] lg:max-h-[800px] bg-graphite/80 backdrop-blur-3xl rounded-[2rem] sm:rounded-[3rem] border border-white/10 p-6 sm:p-8 md:p-20 flex flex-col md:flex-row shadow-[0_30px_100px_rgba(0,0,0,0.8)] overflow-hidden">
                         {/* Visuals */}
                         <div className="absolute inset-0 z-0 flex items-center justify-center md:justify-end pr-0 md:pr-20 opacity-20 md:opacity-100 mix-blend-screen pointer-events-none">
                             <div className="w-full h-full md:w-1/2 aspect-square flex items-center justify-center">
@@ -90,10 +90,10 @@ export default function Protocol() {
                             </div>
                         </div>
                         {/* Content */}
-                        <div className="relative z-10 w-full md:w-1/2 flex flex-col justify-center gap-6 md:gap-8 h-full text-ghost">
-                            <span className="font-mono text-plasma text-lg md:text-xl tracking-widest font-bold">[{card.id}]</span>
-                            <h2 className="font-sans font-bold text-5xl sm:text-6xl md:text-8xl tracking-tighter leading-[0.9]">{card.title}</h2>
-                            <p className="font-mono text-ghost/70 text-base md:text-lg max-w-sm md:max-w-md leading-relaxed mt-4">{card.desc}</p>
+                        <div className="relative z-10 w-full md:w-1/2 flex flex-col justify-center gap-4 sm:gap-6 md:gap-8 h-full text-ghost">
+                            <span className="font-mono text-plasma text-base sm:text-lg md:text-xl tracking-widest font-bold">[{card.id}]</span>
+                            <h2 className="font-sans font-bold text-4xl sm:text-5xl md:text-7xl xl:text-8xl tracking-tighter leading-[0.9]">{card.title}</h2>
+                            <p className="font-mono text-ghost/70 text-sm sm:text-base md:text-lg max-w-sm md:max-w-md leading-relaxed mt-2 sm:mt-4">{card.desc}</p>
                         </div>
                     </div>
                 </div>
