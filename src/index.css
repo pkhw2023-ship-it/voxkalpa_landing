@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: theme('colors.void');
+  color: theme('colors.ghost');
+}
+
+/* Magnetic Button Base Styles */
+.btn-magnetic {
+  @apply relative overflow-hidden rounded-full inline-flex items-center justify-center font-sans font-semibold transition-all duration-300;
+  transform: scale(1);
+}
+
+.btn-magnetic:hover {
+  transform: scale(1.03) translateY(-1px);
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btn-magnetic .btn-bg {
+  @apply absolute inset-0 block transition-transform duration-500 ease-out z-0;
+  transform: translateY(100%);
+}
+
+.btn-magnetic:hover .btn-bg {
+  transform: translateY(0);
+}
+
+.btn-magnetic .btn-content {
+  @apply relative z-10 flex items-center justify-center gap-2;
+}
+
+/* Base Link Styles */
+.hover-lift {
+  @apply transition-transform duration-300;
+}
+.hover-lift:hover {
+  transform: translateY(-1px);
+}
