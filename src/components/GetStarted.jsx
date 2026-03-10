@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function GetStarted() {
+export default function GetStarted({ onOpenModal }) {
     return (
         <section className="relative w-full py-40 md:py-56 px-6 flex items-center justify-center bg-void z-20 overflow-hidden">
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -14,11 +14,14 @@ export default function GetStarted() {
                 <p className="font-mono text-ghost/70 max-w-lg mx-auto text-xs sm:text-sm md:text-base leading-relaxed px-4 sm:px-0">
                     Join the exclusive collective of digital artists and engineers shaping the future of voxel technology.
                 </p>
-                <button className="btn-magnetic bg-plasma text-void px-10 md:px-14 py-5 md:py-6 text-xl md:text-2xl rounded-full hover:text-ghost mt-8 shadow-[0_0_40px_rgba(123,97,255,0.4)]">
+                <button
+                    onClick={onOpenModal}
+                    className="btn-magnetic bg-plasma text-void px-10 md:px-14 py-5 md:py-6 text-xl md:text-2xl rounded-full hover:text-ghost mt-8 shadow-[0_0_40px_rgba(123,97,255,0.4)]"
+                >
                     <span className="btn-bg bg-ghost/10"></span>
                     <span className="btn-content font-bold">Request Early Access</span>
                 </button>
             </div>
-        </section>
+        </section >
     );
 }
