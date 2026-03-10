@@ -1,7 +1,7 @@
 import React, { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
 
-export default function Hero() {
+export default function Hero({ onOpenModal }) {
     const container = useRef(null);
 
     useLayoutEffect(() => {
@@ -49,7 +49,10 @@ export default function Hero() {
                     Voxkalpa AI Labs. Real-time physics assimilation and photorealistic scene generation. We transform raw spatial data into hyper-functional, dynamic 3D interactions.
                 </p>
                 <div className="hero-elem mt-8 sm:mt-10">
-                    <button className="btn-magnetic bg-plasma text-void px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg rounded-full hover:text-ghost">
+                    <button
+                        onClick={onOpenModal}
+                        className="btn-magnetic bg-plasma text-void px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg rounded-full hover:text-ghost"
+                    >
                         <span className="btn-bg bg-ghost/10"></span>
                         <span className="btn-content font-bold">Request Early Access</span>
                     </button>
