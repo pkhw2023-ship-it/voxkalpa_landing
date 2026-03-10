@@ -76,13 +76,23 @@ function TelemetryTypewriter() {
     }, []);
 
     return (
-        <div className="h-64 w-full bg-[#05050A] rounded-2xl p-6 border border-white/5 flex flex-col font-mono text-xs md:text-sm relative overflow-hidden shadow-inner shadow-black/50">
-            <div className="flex items-center gap-2 mb-4 w-full border-b border-white/5 pb-3">
-                <div className="w-2 h-2 rounded-full bg-plasma animate-pulse shadow-[0_0_8px_rgba(123,97,255,1)]"></div>
-                <span className="text-[10px] text-ghost/50 tracking-wider">LIVE FEED</span>
+        <div className="h-72 w-full bg-[#05050A] rounded-2xl border border-white/5 flex flex-col font-mono text-xs md:text-sm relative overflow-hidden shadow-inner shadow-black/50 group">
+            <div className="absolute inset-0 z-0">
+                <video
+                    src="/media/bunny.mp4"
+                    autoPlay loop muted playsInline
+                    className="w-full h-full object-cover opacity-30 mix-blend-screen grayscale group-hover:grayscale-0 group-hover:opacity-60 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-void via-void/80 to-transparent pointer-events-none"></div>
             </div>
-            <div className="text-plasma whitespace-pre-wrap flex-1 leading-relaxed">
-                {text}<span className="inline-block w-2.5 h-3.5 bg-plasma animate-pulse ml-1 align-middle"></span>
+            <div className="relative z-10 p-6 flex flex-col h-full w-full">
+                <div className="flex items-center gap-2 mb-4 w-full border-b border-white/10 pb-3">
+                    <div className="w-2 h-2 rounded-full bg-plasma animate-pulse shadow-[0_0_8px_rgba(123,97,255,1)]"></div>
+                    <span className="text-[10px] text-ghost/70 tracking-wider font-bold">LIVE METRICS</span>
+                </div>
+                <div className="text-plasma whitespace-pre-wrap flex-1 leading-relaxed drop-shadow-md">
+                    {text}<span className="inline-block w-2.5 h-3.5 bg-plasma animate-pulse ml-1 align-middle"></span>
+                </div>
             </div>
         </div>
     );
@@ -172,8 +182,8 @@ export default function Features() {
                         <TelemetryTypewriter />
                     </div>
                     <div className="mt-auto">
-                        <h3 className="font-sans font-bold text-2xl text-ghost mb-3 tracking-tight">Accelerated Scene Generation</h3>
-                        <p className="font-mono text-sm text-ghost/60 leading-relaxed">Rapidly generate high-fidelity voxel environments via our proprietary compiler.</p>
+                        <h3 className="font-sans font-bold text-2xl text-ghost mb-3 tracking-tight">Generative Morph Interpolation</h3>
+                        <p className="font-mono text-sm text-ghost/60 leading-relaxed">Real-time mesh evolution and volumetric transformations calculated instantaneously via our proprietary physics compiler.</p>
                     </div>
                 </div>
 

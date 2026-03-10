@@ -89,10 +89,9 @@ export default function Protocol() {
                                 <card.Anim />
                             </div>
                         </div>
-                        {/* Content */}
                         <div className="relative z-10 w-full md:w-1/2 flex flex-col justify-center gap-4 sm:gap-6 md:gap-8 h-full text-ghost">
                             <span className="font-mono text-plasma text-base sm:text-lg md:text-xl tracking-widest font-bold">[{card.id}]</span>
-                            <h2 className="font-sans font-bold text-4xl sm:text-5xl md:text-7xl xl:text-8xl tracking-tighter leading-[0.9]">{card.title}</h2>
+                            <h2 className="font-sans font-bold text-[clamp(2.5rem,7vw,5rem)] tracking-tighter leading-[0.9]">{card.title}</h2>
                             <p className="font-mono text-ghost/70 text-sm sm:text-base md:text-lg max-w-sm md:max-w-md leading-relaxed mt-2 sm:mt-4">{card.desc}</p>
                         </div>
                     </div>
