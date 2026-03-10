@@ -49,9 +49,9 @@ export default function Philosophy() {
                     Most 3D pipelines focus on: Static Asset Management.
                 </p>
                 <h2 className="phil-text-2 flex flex-col gap-1 md:gap-4">
-                    <span className="font-sans font-bold text-3xl sm:text-4xl md:text-6xl lg:text-7xl text-ghost tracking-tighter block">We focus on:</span>
-                    <span className="font-serif italic text-5xl sm:text-6xl md:text-[8rem] lg:text-[9rem] leading-[0.85] text-plasma block pr-4">Dynamic</span>
-                    <span className="font-serif italic text-5xl sm:text-6xl md:text-[8rem] lg:text-[9rem] leading-[0.85] text-plasma block pr-4">Environments.</span>
+                    <span className="font-sans font-bold text-[clamp(2rem,6vw,4.5rem)] text-ghost tracking-tighter block leading-tight">We focus on:</span>
+                    <span className="font-serif italic text-[clamp(3.5rem,12vw,9rem)] leading-[0.85] text-plasma block pr-4">Dynamic</span>
+                    <span className="font-serif italic text-[clamp(3.5rem,12vw,9rem)] leading-[0.85] text-plasma block pr-4">Environments.</span>
                 </h2>
             </div>
         </section>
